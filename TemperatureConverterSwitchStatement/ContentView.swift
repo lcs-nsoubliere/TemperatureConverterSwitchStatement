@@ -21,15 +21,15 @@ struct ContentView: View {
     //To provide the suggestion for what to wear outside
     var feedback: String {
         
-        if temperatureInCelsius >= -50.0 && temperatureInCelsius < -20.0 {
+        if temperatureInCelsius < -20.0 {
             return "It's freezing outside! 🥶"
-        } else if temperatureInCelsius >= -20.0 && temperatureInCelsius < 0.0 {
+        } else if temperatureInCelsius < 0.0 {
             return "Dress warmly!"
-        } else if temperatureInCelsius >= 0.0 && temperatureInCelsius < 10.0 {
+        } else if temperatureInCelsius < 10.0 {
             return "Need a coat!"
-        } else if temperatureInCelsius >= 10.0 && temperatureInCelsius < 20.0 {
+        } else if temperatureInCelsius < 20.0 {
             return "Not very cold, not very hot... Perfect!"
-        } else if temperatureInCelsius >= 20.0 && temperatureInCelsius < 30.0 {
+        } else if temperatureInCelsius < 30.0 {
             return "Warm weather! Wear thin layers."
         } else {
             return "Never go out! It's too hot. 🥵"
